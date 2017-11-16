@@ -23,5 +23,11 @@
   "bugs": {
     "url": "https://github.com/cmstead/gulp-mochadoc/issues"
   },
-  "homepage": "https://github.com/cmstead/gulp-mochadoc#readme"
+  "homepage": "https://github.com/cmstead/gulp-mochadoc#readme",
+  "dependencies": {
+    "mochadoc-runner": "^1.0.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
