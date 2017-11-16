@@ -22,7 +22,6 @@ function gulpMochadoc (options) {
                 runNext(rest(runnerOptions), done);
             });
         } else if(typeof done === 'function') {
-            console.log('Calling done');
             done();
         }
     }
