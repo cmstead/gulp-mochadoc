@@ -7,8 +7,8 @@ const rest = (values) => Array.prototype.slice.call(values, 1);
 
 
 function gulpMochadoc (options) {
-    
-    function runNext(runnerOptions) {
+
+    function runNext(runnerOptions, done) {
         const nextOptions = first(runnerOptions);
     
         if(runnerOptions.length > 0) {
@@ -19,12 +19,15 @@ function gulpMochadoc (options) {
                     console.log('An error occurred while attempting to build docs: ', nextOptions.name);
                 }
     
-                runNext(rest(runnerOptions));
+                runNext(rest(runnerOptions), done);
             });
+        } else if(typeof done === 'function') {
+            console.log('Calling done');
+            done();
         }
     }
     
-    return function() {
+    return function(done) {
         const runnerOptions = Object.keys(options).map(function(key) {
             return {
                 name: key,
@@ -32,7 +35,7 @@ function gulpMochadoc (options) {
             };
         });
     
-        runNext(runnerOptions);
+        runNext(runnerOptions, done);
     }
 }
 
