@@ -1,0 +1,27 @@
+{
+  "name": "gulp-mochadoc",
+  "version": "1.0.0",
+  "description": "Gulp module for running mochadoc in your build process",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmstead/gulp-mochadoc.git"
+  },
+  "keywords": [
+    "gulp",
+    "mochadoc",
+    "documentation",
+    "api",
+    "mocha",
+    "testing"
+  ],
+  "author": "Chris Stead",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/cmstead/gulp-mochadoc/issues"
+  },
+  "homepage": "https://github.com/cmstead/gulp-mochadoc#readme"
+}
